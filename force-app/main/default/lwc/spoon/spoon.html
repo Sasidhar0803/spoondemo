@@ -1,0 +1,28 @@
+
+<template>
+    <lightning-layout class ="input-section">
+        <lightning-layout-item size="6"><lightning-input
+            name="enter-search"
+            label="enter ingredients"
+            type="search"
+            value={Ingredients}
+            onchange={handleInputChange}
+        ></lightning-input></lightning-layout-item>
+            <lightning-layout-item size="3"><lightning-button variant="brand-outline" label="search" title="Primary action with lighter look" onclick={handleSearch} class="slds-m-left_x-small"></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item size="3">
+            <lightning-button variant="brand" label="Get Random recipe" title="Primary action" onclick={handleClick} class="slds-m-left_x-small" ></lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+    
+    <lightning-layout class="display-section">
+        <lightning-layout-item size="5">
+                <h2>recipe.originalName</h2>
+                <h3>{recipe.amount}</h3>
+        </lightning-layout-item>
+        <lightning-layout-item size="7">
+            <img src={recipe.image} alt={recipe.id}/>
+        </lightning-layout-item>
+
+    </lightning-layout>
+</template>
